@@ -51,6 +51,7 @@ if tf_version.is_tf2():
   from object_detection.models import center_net_hourglass_feature_extractor
   from object_detection.models import center_net_mobilenet_v2_feature_extractor
   from object_detection.models import center_net_mobilenet_v2_fpn_feature_extractor
+  from object_detection.models import center_net_efficientnet_feature_extractor
   from object_detection.models import center_net_resnet_feature_extractor
   from object_detection.models import center_net_resnet_v1_fpn_feature_extractor
   from object_detection.models import faster_rcnn_inception_resnet_v2_keras_feature_extractor as frcnn_inc_res_keras
@@ -141,6 +142,22 @@ if tf_version.is_tf2():
   }
 
   CENTER_NET_EXTRACTOR_FUNCTION_MAP = {
+      'efficientnet_b0':
+          center_net_efficientnet_feature_extractor.efficientnet_b0,
+      'efficientnet_b1':
+          center_net_efficientnet_feature_extractor.efficientnet_b1,
+      'efficientnet_b2':
+          center_net_efficientnet_feature_extractor.efficientnet_b2,
+      'efficientnet_b3':
+          center_net_efficientnet_feature_extractor.efficientnet_b3,
+      'efficientnet_b4':
+          center_net_efficientnet_feature_extractor.efficientnet_b4,
+      'efficientnet_b5':
+          center_net_efficientnet_feature_extractor.efficientnet_b5,
+      'efficientnet_b6':
+          center_net_efficientnet_feature_extractor.efficientnet_b6,
+      'efficientnet_b7':
+          center_net_efficientnet_feature_extractor.efficientnet_b7,
       'resnet_v2_50':
           center_net_resnet_feature_extractor.resnet_v2_50,
       'resnet_v2_101':
